@@ -4,4 +4,15 @@
     height: 20vh;
     justify-content: center;
     display: flex;
+    flex-direction: column;
+
+}
+
+.Header p {
+    color: white;
+}
+
+.Container {
+    width: 1245px;
+    margin: auto;
 }

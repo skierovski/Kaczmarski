@@ -1,9 +1,10 @@
-import './App.css';
-import Header from './Components/Header';
+import styles from './App.module.css';
+import Header from './Components/Header/Header';
+import React from 'react';
 
-function App() {
+const  App: React.FC =() => {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Header/>
     </div>
   );
