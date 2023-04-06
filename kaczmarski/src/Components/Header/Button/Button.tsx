@@ -1,5 +1,5 @@
 import React from "react";
-import { text } from "stream/consumers";
+import styles from './Button.module.css'
 
 export interface ButtonProps {
     text: string;
@@ -8,7 +8,7 @@ export interface ButtonProps {
 const Button:React.FC<ButtonProps> = ({text}) => {
     return(
         <div>
-            <button>{text}</button>
+            <button className={styles.SearchButton}>{text}</button>
         </div>
     )
 }

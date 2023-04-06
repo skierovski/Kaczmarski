@@ -10,9 +10,15 @@
 
 .Header p {
     color: white;
+    font-size: 1rem;
 }
 
 .Container {
     width: 1245px;
     margin: auto;
+}
+
+.SearchBar {
+    display: flex;
+    flex-direction: row;
 }

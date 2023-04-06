@@ -1,5 +1,22 @@
 .Input {
     height: 30px;
-    width: 450px;
+    width: 32vw;
     border: none;
+    font-size: 16px;
+}
+
+.Input:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .Input {
+        width: 50vw;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .Input {
+        width: 70vw;
+    }
 }
