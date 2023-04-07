@@ -1,0 +1,47 @@
+.Searchbar_Container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.Searchbar-input {
+    height: 30px;
+    width: 32vw;
+    border: none;
+    font-size: 16px;
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+.Searchbar-button {
+    height: 32px;
+    border: none;
+    border-radius: 0%;
+    background-color: #E40321;
+    width: 11vw;
+    color: white;
+    font-size: 0.8rem;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .Searchbar-input {
+        width: 50vw;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .Searchbar-input {
+        width: 70vw;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .Searchbar-button {
+        width: 17vw;
+    }
+}

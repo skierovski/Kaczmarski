@@ -1,0 +1,53 @@
+.Table_Container {
+    max-width: 1245px;
+    width: 100vw;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.Table_Box {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.Table_Box tr {
+    border-bottom: 1pt solid #C2C2C2 ;
+}
+
+.Table_Header th {
+    font-size: 12px;
+    @media only screen and (max-width:450px) {
+        
+        font-size: 8px;
+    }
+    button {
+        background-color: transparent;
+        border: none;
+        padding: 0%;
+        cursor: pointer;
+    }
+}
+
+.Table_Header {
+    color: #C2C2C2;
+    font-weight: lighter;
+}
+
+.Table_Body {
+    text-align: center;
+    color: #003054;
+    font-weight: bold;
+
+    tr {
+        height: 50px;
+    }
+    @media only screen and (max-width:450px) {
+        
+        tr {
+            font-size: 14px;
+        }
+        th {
+            font-size: 16px;
+        }
+    }
+}

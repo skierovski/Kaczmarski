@@ -1,17 +1,13 @@
-import styles from './Header.module.css'
+import './Header.scss'
 import React from 'react';
-import Input from './Input/Input';
-import Button from './Button/Button';
+import SearchBar from './SearchBar/SearchBar'
 
 const Header: React.FC = () => {
     return (
-        <header className={styles.Header}>
-            <div className={styles.Container}>
+        <header className="Header">
+            <div className="Header_Container">
             <p>PODAJ NIP LUB NAZWĘ DŁUŻNIKA</p>
-            <div className={styles.SearchBar}>
-            <Input/>
-            <Button text="SZUKAJ"/>
-            </div>
+            <SearchBar ButtonText="SZUKAJ"/>
             </div>
         </header>
     )
