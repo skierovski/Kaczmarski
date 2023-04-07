@@ -15,10 +15,14 @@
 }
 
 .Table_Header th {
-    font-size: 12px;
-    @media only screen and (max-width:450px) {
+    font-size: 0.9rem;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    @media only screen and (max-width:550px) {
         
-        font-size: 8px;
+        font-size: 0.7rem;
     }
     button {
         background-color: transparent;
@@ -31,23 +35,43 @@
 .Table_Header {
     color: #C2C2C2;
     font-weight: lighter;
+
+    button {
+        font-size: 16px;
+        margin-left: 5px;
+    }
 }
 
 .Table_Body {
-    text-align: center;
+    text-align: left;
     color: #003054;
     font-weight: bold;
 
     tr {
         height: 50px;
     }
-    @media only screen and (max-width:450px) {
+    td {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    @media only screen and (max-width:550px) {
         
         tr {
-            font-size: 14px;
+            font-size: 0.7rem;
         }
         th {
             font-size: 16px;
         }
+       
+    }
+    @media only screen and (max-width:400px) {
+        
+        tr {
+            font-size: 0.6rem;
+        }
+        th {
+            font-size: 14px;
+        }
+       
     }
 }

@@ -1,11 +1,12 @@
 .Searchbar_Container {
     display: flex;
     flex-direction: row;
+    padding-left: 10px;
 
 }
 
 .Searchbar-input {
-    height: 30px;
+    height: 40px;
     width: 32vw;
     border: none;
     font-size: 16px;
@@ -17,7 +18,7 @@
 
 
 .Searchbar-button {
-    height: 32px;
+    height: 42px;
     border: none;
     border-radius: 0%;
     background-color: #E40321;
