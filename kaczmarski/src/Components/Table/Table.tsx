@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
 import './Table.scss'
 
 
-interface DataType {
+interface TableProps {
+    searchData: DataType[];
+  }
+
+export interface DataType {
     Id: number;
     Name: string;
     NIP: string;
@@ -10,15 +14,21 @@ interface DataType {
     Date: string;
   }
 
-const Table: React.FC = () => {
+
+
+  const Table: React.FC<TableProps> = ({ searchData }) => {
     const [data, setData] = useState<DataType[]>([])
     const [order, setOrder] = useState("ASC")
-    useEffect(() => {
-        fetch('	https://rekrutacja-webhosting-it.krd.pl/api/Recruitment/GetTopDebts')
-        .then(response => response.json())
-        .then(data => setData(data))
-    }, [])
-    console.log(data)
+
+      useEffect(() => {
+        if (searchData.length > 0) {
+          setData(searchData);
+        } else {
+          fetch('https://rekrutacja-webhosting-it.krd.pl/api/Recruitment/GetTopDebts')
+            .then(response => response.json())
+            .then(data => setData(data.slice(0, 10)));
+        }
+      }, [searchData]);
 
 
 
@@ -69,8 +79,9 @@ const Table: React.FC = () => {
                             <td>{record.Value}</td>
                             <td>{record.Date.split('T')[0]}</td>
                             </tr>
+                            
                         )):
-                        <div>Data Loading ...</div>}
+                        <div style={{paddingLeft: '10px'}}>No results</div>}
                 </tbody>
             </table>
         </div>
